@@ -36,7 +36,10 @@
   margin-bottom: 20px;
   text-align: center;
 }
-.cont ul li img {
+.cont ul li a {
+  display: block;
+}
+.cont ul li a img {
   margin-top: 10px;
   width: 100px;
   height: 100px;

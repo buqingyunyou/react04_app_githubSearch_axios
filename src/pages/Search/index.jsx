@@ -41,6 +41,7 @@ export default class Search extends React.Component {
           username: item.login,
           avatar_url: item.avatar_url,
           key: item.id,
+          html_url:item.html_url
         };
       });
       setUsers(result);
