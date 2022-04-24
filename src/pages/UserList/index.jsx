@@ -1,13 +1,20 @@
 import React from "react";
 import UserItem from "./UserItem";
+import PropTypes from "prop-types";
 
 export default class UserList extends React.Component {
+  static propTypes = {
+    users: PropTypes.array.isRequired,
+  };
   render() {
+    const { users } = this.props;
     return (
       <div>
         <div className="cont">
           <ul>
-            <UserItem />
+            {users.map((item) => {
+              return <UserItem user={item} key={item.key} />;
+            })}
 
             {/* 方式2：通过require()方法实现 */}
             {/* <li>
